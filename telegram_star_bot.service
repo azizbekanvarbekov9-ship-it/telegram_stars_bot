@@ -1,0 +1,12 @@
+[Unit]
+Description=take_chat_id_bot
+After=network.target
+
+[Service]
+User=root
+WorkingDirectory=/root/apps/bots/take_chat_id_bot
+ExecStart=/root/apps/bots/take_chat_id_bot/venv/bin/python /root/apps/bots/take_chat_id_bot/main.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
